@@ -8,6 +8,9 @@ target 'RxPracticeMemo' do
   # Pods for RxPracticeMemo
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources'
+  pod 'RxCoreData'
   pod 'NSObject+Rx'
+  pod 'Action'
 
 end
