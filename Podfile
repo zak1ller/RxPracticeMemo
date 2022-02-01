@@ -12,5 +12,6 @@ target 'RxPracticeMemo' do
   pod 'RxCoreData'
   pod 'NSObject+Rx'
   pod 'Action'
-
+  pod 'SnapKit'
+  pod 'Then'
 end

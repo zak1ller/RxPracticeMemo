@@ -18,6 +18,8 @@ PODS:
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
+  - SnapKit (5.0.1)
+  - Then (2.7.0)
 
 DEPENDENCIES:
   - Action
@@ -26,6 +28,8 @@ DEPENDENCIES:
   - RxCoreData
   - RxDataSources
   - RxSwift
+  - SnapKit
+  - Then
 
 SPEC REPOS:
   trunk:
@@ -37,6 +41,8 @@ SPEC REPOS:
     - RxDataSources
     - RxRelay
     - RxSwift
+    - SnapKit
+    - Then
 
 SPEC CHECKSUMS:
   Action: 47f1825511907b4fcd79dd7a7db9526c20f78018
@@ -47,7 +53,9 @@ SPEC CHECKSUMS:
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: aade2b971cbb3ef40fe8c12301170d82448f98f9
+PODFILE CHECKSUM: 16a42ce9ec9ab39a4985a2a3ff987ab4549665e0
 
 COCOAPODS: 1.11.2
