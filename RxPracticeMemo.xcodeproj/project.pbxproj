@@ -13,6 +13,9 @@
 		714FAF8227A96FBD002FB062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714FAF8127A96FBD002FB062 /* Assets.xcassets */; };
 		714FAF8527A96FBD002FB062 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714FAF8327A96FBD002FB062 /* LaunchScreen.storyboard */; };
 		71ACE41327A9836F00313092 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE41227A9836F00313092 /* Memo.swift */; };
+		71ACE41527A9842000313092 /* MemoStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE41427A9842000313092 /* MemoStorageType.swift */; };
+		71ACE41A27A9853100313092 /* RxPracticeMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE41827A9853100313092 /* RxPracticeMemo.xcdatamodeld */; };
+		71ACE41C27A9858800313092 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE41B27A9858800313092 /* MemoryStorage.swift */; };
 		EFF7C682F6CB8FACB32E8E7F /* Pods_RxPracticeMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A13FCEAFB9ECFA1341A7341 /* Pods_RxPracticeMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		714FAF8427A96FBD002FB062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		714FAF8627A96FBD002FB062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71ACE41227A9836F00313092 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		71ACE41427A9842000313092 /* MemoStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageType.swift; sourceTree = "<group>"; };
+		71ACE41927A9853100313092 /* RxPracticeMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RxPracticeMemo.xcdatamodel; sourceTree = "<group>"; };
+		71ACE41B27A9858800313092 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
 		A55F2D66922FB04015F89187 /* Pods-RxPracticeMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPracticeMemo.release.xcconfig"; path = "Target Support Files/Pods-RxPracticeMemo/Pods-RxPracticeMemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +109,9 @@
 		71ACE41027A9826D00313092 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				71ACE41727A984AB00313092 /* CoreDataStorage */,
+				71ACE41627A984A000313092 /* MemoryStorage */,
+				71ACE41427A9842000313092 /* MemoStorageType.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -112,6 +121,22 @@
 			children = (
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		71ACE41627A984A000313092 /* MemoryStorage */ = {
+			isa = PBXGroup;
+			children = (
+				71ACE41B27A9858800313092 /* MemoryStorage.swift */,
+			);
+			path = MemoryStorage;
+			sourceTree = "<group>";
+		};
+		71ACE41727A984AB00313092 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				71ACE41827A9853100313092 /* RxPracticeMemo.xcdatamodeld */,
+			);
+			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
 		B392063736E98989619D6EAC /* Pods */ = {
@@ -246,7 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71ACE41C27A9858800313092 /* MemoryStorage.swift in Sources */,
+				71ACE41A27A9853100313092 /* RxPracticeMemo.xcdatamodeld in Sources */,
 				71ACE41327A9836F00313092 /* Memo.swift in Sources */,
+				71ACE41527A9842000313092 /* MemoStorageType.swift in Sources */,
 				714FAF7927A96FBC002FB062 /* AppDelegate.swift in Sources */,
 				714FAF7B27A96FBC002FB062 /* SceneDelegate.swift in Sources */,
 			);
@@ -470,6 +498,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		71ACE41827A9853100313092 /* RxPracticeMemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				71ACE41927A9853100313092 /* RxPracticeMemo.xcdatamodel */,
+			);
+			currentVersion = 71ACE41927A9853100313092 /* RxPracticeMemo.xcdatamodel */;
+			path = RxPracticeMemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 714FAF6D27A96FBC002FB062 /* Project object */;
 }
