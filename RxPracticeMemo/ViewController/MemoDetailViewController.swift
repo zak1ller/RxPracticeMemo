@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class MemoDetailViewController: UIViewController, ViewModelBindableType {
 
@@ -76,6 +77,8 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
         backButton.rx.action = viewModel.performCancel()
         
         editButton.rx.action = viewModel.makeEditAction()
+        
+        shareButton.rx.action = viewModel.makeShareAction(self)
     }
     
     func setView() {

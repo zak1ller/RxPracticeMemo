@@ -14,7 +14,7 @@ class SceneCoordinator: SceneCoordinationType {
     private let bag = DisposeBag()
     
     private var window: UIWindow
-    private var currentVC: UIViewController
+    var currentVC: UIViewController
     
     required init(window: UIWindow) {
         self.window = window

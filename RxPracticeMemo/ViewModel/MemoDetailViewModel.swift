@@ -47,7 +47,7 @@ class MemoDetailViewModel: CommonViewModel {
                 .map { $0.content }
                 .bind(onNext: { self.content.onNext($0) })
                 .disposed(by: self.rx.disposeBag)
-            
+
             return Observable.empty()
         }
     }
@@ -64,4 +64,11 @@ class MemoDetailViewModel: CommonViewModel {
         }
     }
     
+    func makeShareAction(_ vc: UIViewController) -> CocoaAction {
+        return CocoaAction { _ in
+            let activityVC = UIActivityViewController(activityItems: [self.memo], applicationActivities: nil)
+            vc.present(activityVC, animated: true, completion: nil)
+            return Observable.empty()
+        }
+    }
 }
