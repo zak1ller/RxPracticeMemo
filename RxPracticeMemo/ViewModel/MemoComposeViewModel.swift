@@ -26,17 +26,16 @@ class MemoComposeViewModel: CommonViewModel {
             if let action = saveAction {
                 action.execute(input)
             }
-            
             return sceneCoodinator.close(animated: true).asObservable().map { _ in }
         }
         self.cancelAction = CocoaAction {
             if let action = cancelAction {
                 action.execute(())
             }
-            
             return sceneCoodinator.close(animated: true).asObservable().map { _ in }
         }
-        
         super.init(title: title, sceneCoordinator: sceneCoodinator, storage: storage)
     }
 }
+
+
