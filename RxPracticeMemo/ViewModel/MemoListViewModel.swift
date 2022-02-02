@@ -42,6 +42,21 @@ class MemoListViewModel: CommonViewModel {
         }
     }
     
+    func makeDeleteAction() -> Action<Memo, Void> {
+        return Action { memo in
+            print(memo.content)
+            return self.storage.delete(memo: memo)
+                .map { _ in }
+        }
+    }
+    
+    lazy var deleteAction: Action<Memo, Void> = {
+        return Action { memo in
+            return self.storage.delete(memo: memo)
+                .map { _ in }
+        }
+    }()
+    
     lazy var detailAction: Action<Memo, Void> = {
         return Action { memo in
             let detailViewModel = MemoDetailViewModel(memo: memo, title: "메모", sceneCoordinator: self.sceneCoordinator, storage: self.storage)

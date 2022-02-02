@@ -79,6 +79,8 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
         editButton.rx.action = viewModel.makeEditAction()
         
         shareButton.rx.action = viewModel.makeShareAction(self)
+        
+        deleteButton.rx.action = viewModel.makeDeleteAction()
     }
     
     func setView() {
