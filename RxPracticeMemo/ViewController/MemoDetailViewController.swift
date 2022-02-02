@@ -7,12 +7,18 @@
 
 import UIKit
 
-class MemoDetailViewController: UIViewController {
+class MemoDetailViewController: UIViewController, ViewModelBindableType {
 
+    var viewModel: MemoDetailViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
         setConstraint()
+    }
+    
+    func bindViewModel() {
+        
     }
     
     func setView() {
