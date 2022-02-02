@@ -6,7 +6,23 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+import Action
 
-class MemoDetailViewModel {
+class MemoDetailViewModel: CommonViewModel {
+    
+    let cancelAction: CocoaAction
+    
+    init(title: String, sceneCoordinator: SceneCoordinationType, storage: MemoryStorage, cancelAction: CocoaAction? = nil) {
+        self.cancelAction = CocoaAction {
+            if let action = cancelAction {
+                action.execute(())
+            }
+            return sceneCoordinator.close(animated: true).asObservable().map { _ in }
+        }
+        super.init(title: title, sceneCoordinator: sceneCoordinator, storage: storage)
+    }
+    
     
 }
