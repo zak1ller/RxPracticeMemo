@@ -60,7 +60,17 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
     }
     
     func bindViewModel() {
+        viewModel.title
+            .drive(topTitleLabel.rx.text)
+            .disposed(by: rx.disposeBag)
         
+        viewModel.content
+            .bind(to: contentLabel.rx.text)
+            .disposed(by: rx.disposeBag)
+        
+        viewModel.date
+            .bind(to: dateLabel.rx.text)
+            .disposed(by: rx.disposeBag)
     }
     
     func setView() {

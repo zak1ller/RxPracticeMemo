@@ -12,17 +12,26 @@ import Action
 
 class MemoDetailViewModel: CommonViewModel {
     
-    let cancelAction: CocoaAction
+    let memo: Memo
     
-    init(title: String, sceneCoordinator: SceneCoordinationType, storage: MemoryStorage, cancelAction: CocoaAction? = nil) {
-        self.cancelAction = CocoaAction {
-            if let action = cancelAction {
-                action.execute(())
-            }
-            return sceneCoordinator.close(animated: true).asObservable().map { _ in }
-        }
+    private var formatter: DateFormatter = {
+        let f = DateFormatter()
+        f.locale = Locale(identifier: "ko_kr")
+        f.dateStyle = .medium
+        f.timeStyle = .medium
+        return f
+    }()
+    
+    var content: BehaviorSubject<String>
+    var date: BehaviorSubject<String>
+
+    init(memo: Memo, title: String, sceneCoordinator: SceneCoordinationType, storage: MemoryStorage) {
+        self.memo = memo
+        
+        content = BehaviorSubject<String>(value: memo.content)
+        
+        date = BehaviorSubject<String>(value: formatter.string(from: memo.insertDate))
+        
         super.init(title: title, sceneCoordinator: sceneCoordinator, storage: storage)
     }
-    
-    
 }
