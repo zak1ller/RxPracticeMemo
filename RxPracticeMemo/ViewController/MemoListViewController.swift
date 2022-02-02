@@ -12,19 +12,19 @@ import NSObject_Rx
 
 class MemoListViewController: UIViewController, ViewModelBindableType {
 
-    let topTitleLabel = UILabel().then {
+    lazy var topTitleLabel = UILabel().then {
         $0.text = "목록"
         $0.textColor = .black
         $0.font = .systemFont(ofSize: 16, weight: .bold)
     }
     
-    let addButton = UIButton().then {
+    lazy var addButton = UIButton().then {
         $0.setImage(UIImage(systemName: "plus"), for: .normal)
         $0.tintColor = .darkText
         $0.contentMode = .scaleToFill
     }
     
-    let tableView = UITableView().then {
+    lazy var tableView = UITableView().then {
         $0.register(MemoListTableViewCell.self, forCellReuseIdentifier: "MemoListTableViewCell")
     }
     
@@ -46,6 +46,8 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
                 cell.contentLabel.text = memo.content
             }
             .disposed(by: rx.disposeBag)
+        
+        addButton.rx.action = viewModel.makeCreateAction()
     }
     
     func setView() {

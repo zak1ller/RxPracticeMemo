@@ -19,14 +19,17 @@ extension Scene {
         switch self {
         case .list(let memoListViewModel):
             var listVC = MemoListViewController()
+            listVC.modalPresentationStyle = .fullScreen
             listVC.bind(viewModel: memoListViewModel)
             return listVC
         case .detail(let memoDetailViewModel):
             var detailVC = MemoDetailViewController()
+            detailVC.modalPresentationStyle = .fullScreen
             detailVC.bind(viewModel: memoDetailViewModel)
             return detailVC
         case .compose(let memoComposeViewModel):
             var composeVC = MemoComposeViewController()
+            composeVC.modalPresentationStyle = .fullScreen
             composeVC.bind(viewModel: memoComposeViewModel)
             return composeVC
         }
