@@ -15,6 +15,7 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
     }
     
     lazy var backButton = UIButton().then {
+        $0.setTitle("돌아가기", for: .normal)
         $0.setTitleColor(.darkText, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
     }
@@ -33,7 +34,7 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
     lazy var bottomButtonStackView = UIStackView().then {
         $0.axis = .horizontal
         $0.distribution = .fill
-        $0.spacing = 8
+        $0.spacing = 16
     }
     
     lazy var deleteButton = UIButton().then {
@@ -71,6 +72,10 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
         viewModel.date
             .bind(to: dateLabel.rx.text)
             .disposed(by: rx.disposeBag)
+        
+        backButton.rx.action = viewModel.performCancel()
+        
+        editButton.rx.action = viewModel.makeEditAction()
     }
     
     func setView() {
@@ -101,13 +106,13 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
         contentLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(-16)
-            make.top.equalTo(backButton.snp.bottom).offset(16)
+            make.top.equalTo(backButton.snp.bottom).offset(40)
         }
         
         dateLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(-16)
-            make.top.equalTo(contentLabel.snp.bottom).offset(16)
+            make.top.equalTo(contentLabel.snp.bottom).offset(8)
         }
         
         bottomButtonStackView.snp.makeConstraints { make in

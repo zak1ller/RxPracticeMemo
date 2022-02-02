@@ -25,7 +25,7 @@ class MemoDetailViewModel: CommonViewModel {
     var content: BehaviorSubject<String>
     var date: BehaviorSubject<String>
 
-    init(memo: Memo, title: String, sceneCoordinator: SceneCoordinationType, storage: MemoryStorage) {
+    init(memo: Memo, title: String, sceneCoordinator: SceneCoordinationType, storage: MemoStorageType) {
         self.memo = memo
         
         content = BehaviorSubject<String>(value: memo.content)
@@ -34,4 +34,34 @@ class MemoDetailViewModel: CommonViewModel {
         
         super.init(title: title, sceneCoordinator: sceneCoordinator, storage: storage)
     }
+    
+    func performCancel() -> CocoaAction {
+        return CocoaAction { _ in
+            return self.sceneCoordinator.close(animated: true).asObservable().map { _ in }
+        }
+    }
+    
+    func performUpdate(memo: Memo) -> Action<String, Void> {
+        return Action { input in
+            self.storage.update(memo: memo, content: input)
+                .map { $0.content }
+                .bind(onNext: { self.content.onNext($0) })
+                .disposed(by: self.rx.disposeBag)
+            
+            return Observable.empty()
+        }
+    }
+    
+    func makeEditAction() -> CocoaAction {
+        return CocoaAction { _ in
+            let composeViewModel = MemoComposeViewModel(title: "편집", content: self.memo.content, sceneCoodinator: self.sceneCoordinator, storage: self.storage, saveAction: self.performUpdate(memo: self.memo))
+            
+            let composeScene = Scene.compose(composeViewModel)
+            
+            return self.sceneCoordinator.transition(to: composeScene, using: .present, animated: true)
+                .asObservable()
+                .map { _ in }
+        }
+    }
+    
 }
