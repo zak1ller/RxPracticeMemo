@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		714FAF7927A96FBC002FB062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714FAF7827A96FBC002FB062 /* AppDelegate.swift */; };
 		714FAF7B27A96FBC002FB062 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714FAF7A27A96FBC002FB062 /* SceneDelegate.swift */; };
-		714FAF8027A96FBC002FB062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714FAF7E27A96FBC002FB062 /* Main.storyboard */; };
 		714FAF8227A96FBD002FB062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714FAF8127A96FBD002FB062 /* Assets.xcassets */; };
 		714FAF8527A96FBD002FB062 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714FAF8327A96FBD002FB062 /* LaunchScreen.storyboard */; };
 		71ACE41327A9836F00313092 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE41227A9836F00313092 /* Memo.swift */; };
@@ -27,6 +26,9 @@
 		71ACE42E27AA5A4D00313092 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE42D27AA5A4D00313092 /* Scene.swift */; };
 		71ACE43027AA5CDB00313092 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE42F27AA5CDB00313092 /* SceneCoordinatorType.swift */; };
 		71ACE43227AA5D6700313092 /* SceneCoorinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE43127AA5D6700313092 /* SceneCoorinator.swift */; };
+		71ACE43427AA662B00313092 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE43327AA662B00313092 /* CommonViewModel.swift */; };
+		71ACE43727AA684000313092 /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE43627AA684000313092 /* MemoListTableViewCell.swift */; };
+		71ACE43927AA6E6700313092 /* PlaceHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE43827AA6E6700313092 /* PlaceHolderViewController.swift */; };
 		EFF7C682F6CB8FACB32E8E7F /* Pods_RxPracticeMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A13FCEAFB9ECFA1341A7341 /* Pods_RxPracticeMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +38,6 @@
 		714FAF7527A96FBC002FB062 /* RxPracticeMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPracticeMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714FAF7827A96FBC002FB062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		714FAF7A27A96FBC002FB062 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		714FAF7F27A96FBC002FB062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		714FAF8127A96FBD002FB062 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		714FAF8427A96FBD002FB062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		714FAF8627A96FBD002FB062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +56,9 @@
 		71ACE42D27AA5A4D00313092 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		71ACE42F27AA5CDB00313092 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		71ACE43127AA5D6700313092 /* SceneCoorinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoorinator.swift; sourceTree = "<group>"; };
+		71ACE43327AA662B00313092 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
+		71ACE43627AA684000313092 /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
+		71ACE43827AA6E6700313092 /* PlaceHolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderViewController.swift; sourceTree = "<group>"; };
 		A55F2D66922FB04015F89187 /* Pods-RxPracticeMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPracticeMemo.release.xcconfig"; path = "Target Support Files/Pods-RxPracticeMemo/Pods-RxPracticeMemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,15 +95,16 @@
 		714FAF7727A96FBC002FB062 /* RxPracticeMemo */ = {
 			isa = PBXGroup;
 			children = (
-				71ACE41127A9828200313092 /* Scene */,
-				71ACE41027A9826D00313092 /* Service */,
-				71ACE40F27A9825E00313092 /* ViewModel */,
-				71ACE40E27A9824A00313092 /* ViewController */,
-				71ACE40D27A9823600313092 /* Model */,
 				714FAF7827A96FBC002FB062 /* AppDelegate.swift */,
 				714FAF7A27A96FBC002FB062 /* SceneDelegate.swift */,
 				714FAF8127A96FBD002FB062 /* Assets.xcassets */,
 				714FAF8627A96FBD002FB062 /* Info.plist */,
+				71ACE41127A9828200313092 /* Scene */,
+				71ACE41027A9826D00313092 /* Service */,
+				71ACE40D27A9823600313092 /* Model */,
+				71ACE40F27A9825E00313092 /* ViewModel */,
+				71ACE40E27A9824A00313092 /* ViewController */,
+				71ACE43527AA682900313092 /* View */,
 			);
 			path = RxPracticeMemo;
 			sourceTree = "<group>";
@@ -115,11 +120,11 @@
 		71ACE40E27A9824A00313092 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				714FAF7E27A96FBC002FB062 /* Main.storyboard */,
 				714FAF8327A96FBD002FB062 /* LaunchScreen.storyboard */,
 				71ACE41D27A988D000313092 /* MemoListViewController.swift */,
 				71ACE41F27A989A900313092 /* MemoDetailViewController.swift */,
 				71ACE42127A989D600313092 /* MemoComposeViewController.swift */,
+				71ACE43827AA6E6700313092 /* PlaceHolderViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				71ACE42527AA562200313092 /* MemoDetailViewModel.swift */,
 				71ACE42727AA565700313092 /* MemoComposeViewModel.swift */,
 				71ACE42927AA569A00313092 /* ViewModelBindableType.swift */,
+				71ACE43327AA662B00313092 /* CommonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -170,6 +176,14 @@
 				71ACE41827A9853100313092 /* RxPracticeMemo.xcdatamodeld */,
 			);
 			path = CoreDataStorage;
+			sourceTree = "<group>";
+		};
+		71ACE43527AA682900313092 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71ACE43627AA684000313092 /* MemoListTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B392063736E98989619D6EAC /* Pods */ = {
@@ -251,7 +265,6 @@
 			files = (
 				714FAF8527A96FBD002FB062 /* LaunchScreen.storyboard in Resources */,
 				714FAF8227A96FBD002FB062 /* Assets.xcassets in Resources */,
-				714FAF8027A96FBC002FB062 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +322,7 @@
 				71ACE42E27AA5A4D00313092 /* Scene.swift in Sources */,
 				71ACE42027A989A900313092 /* MemoDetailViewController.swift in Sources */,
 				71ACE42A27AA569A00313092 /* ViewModelBindableType.swift in Sources */,
+				71ACE43727AA684000313092 /* MemoListTableViewCell.swift in Sources */,
 				71ACE41A27A9853100313092 /* RxPracticeMemo.xcdatamodeld in Sources */,
 				71ACE41327A9836F00313092 /* Memo.swift in Sources */,
 				71ACE41527A9842000313092 /* MemoStorageType.swift in Sources */,
@@ -317,7 +331,9 @@
 				71ACE43027AA5CDB00313092 /* SceneCoordinatorType.swift in Sources */,
 				71ACE42427AA55E900313092 /* MemoListViewModel.swift in Sources */,
 				71ACE42627AA562200313092 /* MemoDetailViewModel.swift in Sources */,
+				71ACE43427AA662B00313092 /* CommonViewModel.swift in Sources */,
 				71ACE42C27AA59B900313092 /* TransitionModel.swift in Sources */,
+				71ACE43927AA6E6700313092 /* PlaceHolderViewController.swift in Sources */,
 				71ACE41E27A988D000313092 /* MemoListViewController.swift in Sources */,
 				71ACE42227A989D600313092 /* MemoComposeViewController.swift in Sources */,
 				714FAF7B27A96FBC002FB062 /* SceneDelegate.swift in Sources */,
@@ -327,14 +343,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		714FAF7E27A96FBC002FB062 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				714FAF7F27A96FBC002FB062 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		714FAF8327A96FBD002FB062 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -475,7 +483,6 @@
 				INFOPLIST_FILE = RxPracticeMemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -504,7 +511,6 @@
 				INFOPLIST_FILE = RxPracticeMemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
