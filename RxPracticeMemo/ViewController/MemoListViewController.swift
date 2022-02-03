@@ -42,9 +42,7 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .disposed(by: rx.disposeBag)
         
         viewModel.memoList
-            .bind(to: tableView.rx.items(cellIdentifier: "MemoListTableViewCell", cellType: MemoListTableViewCell.self)) { row, memo, cell in
-                cell.contentLabel.text = memo.content
-            }
+            .bind(to: tableView.rx.items(dataSource: viewModel.dataSource))
             .disposed(by: rx.disposeBag)
         
         addButton.rx.action = viewModel.makeCreateAction()
