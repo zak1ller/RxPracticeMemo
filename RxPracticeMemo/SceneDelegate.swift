@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         self.window = window
         
-        let storage = MemoryStorage()
+        let storage = CoreDataStorage(modelName: "RxPracticeMemo")
         let coordinator = SceneCoordinator(window: window)
         
         let listViewModel = MemoListViewModel(title: "목록", sceneCoordinator: coordinator, storage: storage)

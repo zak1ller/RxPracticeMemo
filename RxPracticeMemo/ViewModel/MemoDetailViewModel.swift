@@ -12,7 +12,7 @@ import Action
 
 class MemoDetailViewModel: CommonViewModel {
     
-    let memo: Memo
+    var memo: Memo
     
     private var formatter: DateFormatter = {
         let f = DateFormatter()
@@ -48,6 +48,8 @@ class MemoDetailViewModel: CommonViewModel {
                 .bind(onNext: { self.content.onNext($0) })
                 .disposed(by: self.rx.disposeBag)
 
+            self.memo.content = input
+            
             return Observable.empty()
         }
     }

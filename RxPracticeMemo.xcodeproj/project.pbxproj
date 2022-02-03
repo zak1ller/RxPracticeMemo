@@ -29,6 +29,7 @@
 		71ACE43427AA662B00313092 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE43327AA662B00313092 /* CommonViewModel.swift */; };
 		71ACE43727AA684000313092 /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE43627AA684000313092 /* MemoListTableViewCell.swift */; };
 		71ACE43927AA6E6700313092 /* PlaceHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACE43827AA6E6700313092 /* PlaceHolderViewController.swift */; };
+		71EA695227ABBCA00058031F /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA695127ABBCA00058031F /* CoreDataStorage.swift */; };
 		EFF7C682F6CB8FACB32E8E7F /* Pods_RxPracticeMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A13FCEAFB9ECFA1341A7341 /* Pods_RxPracticeMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		71ACE43327AA662B00313092 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 		71ACE43627AA684000313092 /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
 		71ACE43827AA6E6700313092 /* PlaceHolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderViewController.swift; sourceTree = "<group>"; };
+		71EA695127ABBCA00058031F /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		A55F2D66922FB04015F89187 /* Pods-RxPracticeMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPracticeMemo.release.xcconfig"; path = "Target Support Files/Pods-RxPracticeMemo/Pods-RxPracticeMemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				71ACE41827A9853100313092 /* RxPracticeMemo.xcdatamodeld */,
+				71EA695127ABBCA00058031F /* CoreDataStorage.swift */,
 			);
 			path = CoreDataStorage;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				71ACE43227AA5D6700313092 /* SceneCoorinator.swift in Sources */,
 				714FAF7927A96FBC002FB062 /* AppDelegate.swift in Sources */,
 				71ACE43027AA5CDB00313092 /* SceneCoordinatorType.swift in Sources */,
+				71EA695227ABBCA00058031F /* CoreDataStorage.swift in Sources */,
 				71ACE42427AA55E900313092 /* MemoListViewModel.swift in Sources */,
 				71ACE42627AA562200313092 /* MemoDetailViewModel.swift in Sources */,
 				71ACE43427AA662B00313092 /* CommonViewModel.swift in Sources */,
